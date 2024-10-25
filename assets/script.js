@@ -140,6 +140,7 @@ let bannerImg = document.getElementsByClassName("banner-img");
 let text = document.getElementById("tagLine1")
 let texte = document.getElementsByClassName("tagLine");
 
+let slide1 = document.getElementById("slide1")
 let arrowLeft = document.querySelector(".arrow_left");
 let arrowRight = document.querySelector(".arrow_right");
 
@@ -150,7 +151,8 @@ arrowLeft.addEventListener("click", () => {
    
 	if (i <= 0) i = slides.length;
 	i-=1
-	bannerImg.src = "./assets/images/slideshow/${slides[i]}.image";
+	bannerImg.src = `./assets/images/slideshow/${slides[i].image}`;
+	slide1.setAttribute("src", `./assets/images/slideshow/${slides[i].image}`);
 	text.innerHTML = slides[i].tagLine;
   });
 
@@ -160,7 +162,8 @@ arrowLeft.addEventListener("click", () => {
 	} else {
 		i = 0
 	}
-	bannerImg.src = "./assets/images/slideshow/${slides[i].image";
+	bannerImg.src = `./assets/images/slideshow/${slides[i].image}`;
+	slide1.setAttribute("src", `./assets/images/slideshow/${slides[i].image}`);
 	text.innerHTML = slides[i].tagLine;
 })
 
