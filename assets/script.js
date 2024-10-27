@@ -33,7 +33,7 @@ let i = 0
   bannerImg = document.getElementsByClassName('carrousel-img')[0],
   baliseSpan = ""
 
-  // création des dots
+// création des dots
   for (let i = 0; i < slides.length; i++) {
 	baliseSpan += `<button type="button" id="dot1" class="dot" aria-current="true" aria-label="Slide 1" checked></button>`
 
@@ -43,6 +43,7 @@ document.getElementById('nombre-dots').innerHTML = baliseSpan;
 let dots = document.querySelectorAll('.dot');
 dots[i].setAttribute("class", "dot_selected");  
 
+// Flèche gauche 
   arrowLeft.addEventListener("click", () => {
 	dots[i].setAttribute("class", "dot"); 
 	if (i <= 0) i = slides.length;
@@ -50,9 +51,8 @@ dots[i].setAttribute("class", "dot_selected");
     dots[i].setAttribute("class", "dot_selected");  
 	slide1.setAttribute("src", `./assets/images/slideshow/${slides[i].image}`);
 	text.innerHTML = slides[i].tagLine; 
-
   });  
-
+// Flèche droite
   arrowRight.addEventListener("click", () => {
 	dots[i].setAttribute("class", "dot");
 	if (slides[i + 1]) {
@@ -64,8 +64,6 @@ dots[i].setAttribute("class", "dot_selected");
 	dots[i].setAttribute("class", "dot_selected");
 	slide1.setAttribute("src", `./assets/images/slideshow/${slides[i].image}`);
 	text.innerHTML = slides[i].tagLine;
-
-
    });
 
 
