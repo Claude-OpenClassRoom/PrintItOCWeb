@@ -402,3 +402,23 @@ footer div {
 		flex: 2;
 	}
 }
+
+#nombre-dots {
+	position: absolute;
+	bottom: 0.1em;
+	height: 28px;
+	width: auto;
+	transform: translate(-50%, -50%);
+	left: 50%;
+  }
+
+  #nombre-dots:hover {
+	background-color: #00000054;
+	border-radius: 10px;
+  }
+
+ 
+
+
+
+
