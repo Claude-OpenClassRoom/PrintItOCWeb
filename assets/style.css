@@ -255,7 +255,7 @@ header {
 }
 /* Fin du code CSS pour le carousel */
 #banner p {
-	position:absolute;
+	/*position:absolute;*/
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
 	font-size: 50px;
@@ -265,7 +265,10 @@ header {
 	text-align: center;
 	top: 180px;
     left: 500px;
-	display: row;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+    white-space: nowrap;
 }
 #banner span {
 	display: block;
